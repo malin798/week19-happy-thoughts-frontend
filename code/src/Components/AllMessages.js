@@ -7,7 +7,7 @@ export const AllMessages = () => {
   const [allMessages, setAllMessages] = useState([]);
 
   useEffect(() => {
-    
+
     fetch("https://technigo-thoughts.herokuapp.com/", {
       method: 'GET'
     })
@@ -24,7 +24,7 @@ export const AllMessages = () => {
 
         <li key={message._id}>
 
-          <section>
+          <section className="all-messages">
             {message.message}
           </section>
 
