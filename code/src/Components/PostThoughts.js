@@ -22,23 +22,23 @@ export const PostThoughts = () => {
    }
 
   return (
-   <form onSubmit={handleSubmit} //on submit = prevent reload and run function handleSubmit 
-   > 
-      <li className="my-thought">
-      <p>What is making you happy right now?</p>
-      <textarea placeholder="Fill in your happy thought here"
-      value={thought}
-      onChange={event => setThought(event.target.value)}>
-      </textarea>
-      <button 
-      type="submit"
-      className="send-button" 
-      style={{backgroundColor: '#ffb2b2'}}
-      >
-        <span role="img" aria-label="heart emoji">❤️</span> Send happy thought <span role="img" aria-label="heart emoji">❤️</span>
-      </button>
-      </li>
-    </form>
+    <li className="my-thought">
+      <form onSubmit={handleSubmit}> 
+        <p>What is making you happy right now?</p>
+        <textarea placeholder="Fill in your happy thought here"
+        value={thought}
+        onChange={event => setThought(event.target.value)}>
+        </textarea>
+        <button 
+        type="submit"
+        className="send-button" 
+        style={{backgroundColor: '#ffb2b2'}}
+        >
+          <span role="img" aria-label="heart emoji">❤️</span> Send happy thought <span role="img" aria-label="heart emoji">❤️</span>
+        </button>
+      
+      </form>
+    </li>
   )
 }
 
