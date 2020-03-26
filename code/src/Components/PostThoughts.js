@@ -2,7 +2,6 @@ import React, { useState } from "react"
 
 export const PostThoughts = () => {
 
-  const [loading, setLoading] = useState(true)
   const [thought, setThought] = useState("");
   
   const handleSubmit = (event) => {
@@ -18,8 +17,6 @@ export const PostThoughts = () => {
       })
     })
     .then(() => {
-      setLoading(false)
-      console.log(loading)
       window.location.reload()
     })
    }
@@ -40,10 +37,9 @@ export const PostThoughts = () => {
         </textarea>
 
         <p className="show-input-length">
-          {thought.length} / 140 characters
+          {thought.length} / 140 characters. {thought.length < 5 ? <p>Enter at least 5 characters.</p> : "" }
         </p>
-          {/* {thought.length < 5 ? <p>5 chars or more</p> : <p>Entered 5 chars</p> } */}
-      
+          
         <button 
         type="submit"
         className="send-button" 

@@ -1,13 +1,13 @@
 # Happy Thoughts
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Assignment 11 at Technigo bootcamp. Project to practice API:s with React, first time using useEffect hooks. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by getting console logging a lot to make sure the information was loading properly. After getting all the messages to load I styled the page somewhat and 
+added buttons that would get some functionality after that. I got a deeper understanding of the relationships between different components and how to use the state of
+the components to trigger different events (like backgroundcolor). If I had more time I would try to break the App component apart more and create more seeparate components.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://malins-project-happy-thoughts.netlify.com/
