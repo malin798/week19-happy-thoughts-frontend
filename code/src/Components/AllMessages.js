@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import moment from 'moment';
-import { LikePost } from "./LikePost"
 import { OneMessage } from "./OneMessage";
 
 export const AllMessages = () => {
@@ -23,24 +21,7 @@ export const AllMessages = () => {
             
       return (
         <OneMessage message={message}/>
-
-        // <li key={message._id}>
-        //   <section className="message">
-        //     {message.message}
-        //   </section>
-         
-        //   <section className="activity">
-        //     <div className="likes">
-        //       <LikePost message={message}/> 
-        //     </div>
-        //     <div>
-        //       {moment(message.createdAt).fromNow()}
-        //     </div>
-        //   </section>
-
-        // </li>
       )
-      
     })}
-     </section>
+  </section>
   )}
