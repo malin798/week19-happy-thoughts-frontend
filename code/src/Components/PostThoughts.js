@@ -7,7 +7,7 @@ export const PostThoughts = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
   
-    fetch("https://technigo-thoughts.herokuapp.com/", {
+    fetch("https://malins-happy-thoughts-api.herokuapp.com/thoughts", {
       method: 'POST',
       headers: {
          "content-type": "application/json" 

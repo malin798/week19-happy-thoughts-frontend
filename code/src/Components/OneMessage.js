@@ -12,7 +12,7 @@ export const OneMessage = (param)=> {
          
           <section className="activity">
             <div className="likes">
-              <LikePost message={param.message}/> 
+              <LikePost message={param.message}/>  
             </div>
             <div>
               {moment(param.message.createdAt).fromNow()}

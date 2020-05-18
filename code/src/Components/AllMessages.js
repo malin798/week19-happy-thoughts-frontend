@@ -6,8 +6,7 @@ export const AllMessages = () => {
   const [allMessages, setAllMessages] = useState([]);
 
   useEffect(() => {
-
-    fetch("https://technigo-thoughts.herokuapp.com/", {
+    fetch("https://malins-happy-thoughts-api.herokuapp.com/thoughts", {
       method: 'GET'
     })
 

@@ -6,7 +6,7 @@ export const LikePost = ({message}) => {
 
     setLikes(likes +1)
   
-    fetch(`https://technigo-thoughts.herokuapp.com/${param._id}/like`, {
+    fetch(`https://malins-happy-thoughts-api.herokuapp.com/thoughts/${param._id}/like`, {
       method: "POST",
          body: "", 
       headers: { "content-type": "application/json",}
