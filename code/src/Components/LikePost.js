@@ -2,18 +2,18 @@ import React, { useState } from "react";
 
 export const LikePost = ({message}) => {
 
-  const sendLike = (param) => {
+  const [likes, setLikes] = useState(message.hearts) 
+
+  const sendLike = (message) => {
 
     setLikes(likes +1)
-  
-    fetch(`https://malins-happy-thoughts-api.herokuapp.com/thoughts/${param._id}/like`, {
+    //`https://malins-happy-thoughts-api.herokuapp.com/thoughts/${param._id}/like`
+    fetch(`https://malins-happy-thoughts-api.herokuapp.com/thoughts/${message._id}/like`, {
       method: "POST",
          body: "", 
       headers: { "content-type": "application/json",}
       })
   };
-
-  const [likes, setLikes] = useState(message.hearts) 
 
   return (
     <>

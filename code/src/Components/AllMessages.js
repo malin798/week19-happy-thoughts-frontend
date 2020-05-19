@@ -1,26 +1,41 @@
-import React, { useEffect, useState } from "react";
-import { OneMessage } from "./OneMessage";
+import React, { useEffect } from "react";
+import { MessageItem } from "./MessageItem";
+import { FilterOptions } from './FilterOptions';
+import { Loading } from './Loading'
 
-export const AllMessages = () => {
-
-  const [allMessages, setAllMessages] = useState([]);
-
+export const AllMessages = ({myFilter, setMyFilter, allMessages, setAllMessages, loading, setLoading, thought}) => {
+    
+  //"https://malins-happy-thoughts-api.herokuapp.com/thoughts"
   useEffect(() => {
-    fetch("https://malins-happy-thoughts-api.herokuapp.com/thoughts", {
+    setLoading(true)
+    fetch(`https://malins-happy-thoughts-api.herokuapp.com/thoughts${myFilter}`, {
       method: 'GET'
     })
-
     .then(response => response.json()) 
-    .then(messages => setAllMessages(messages));
-  }, []);
+    .then(messages => {
+      setAllMessages(messages)
+      setLoading(false)
+    });
+  }, [myFilter, thought]);
 
-  return (
-  <section className="all-messages">
-    {allMessages.map(message => { 
-            
-      return (
-        <OneMessage message={message}/>
-      )
-    })}
-  </section>
-  )}
+  if (loading) {
+    return (
+      < Loading />
+    )
+  } else {
+    return (
+      <>
+        < FilterOptions setMyFilter={setMyFilter}/>
+        <section className="all-messages">
+
+          {allMessages.map(message => { 
+                  
+            return (
+              < MessageItem message={message} key={message.createdAt}/>
+            )
+          })}
+          
+        </section>
+      </>
+    )}
+}

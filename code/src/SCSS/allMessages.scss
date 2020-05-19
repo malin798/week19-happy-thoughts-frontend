@@ -1,0 +1,26 @@
+@import './var_mixin.scss';
+
+.all-messages {
+  margin: 5px 0;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.activity {
+  @include display(space-between, center, unset);
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+}
+
+.emoji {
+  @include display(center, center, unset);
+  @include size(30px, 30px);
+  border-radius: 50%;
+  margin-right: 5px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}

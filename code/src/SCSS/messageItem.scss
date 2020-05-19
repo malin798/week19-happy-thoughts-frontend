@@ -1,0 +1,10 @@
+@import './var_mixin.scss';
+
+.message-item {
+  @include box-shadow;
+  @include display(space-between, unset, column);
+  @include size(fit-content, 98%);
+  min-height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+}

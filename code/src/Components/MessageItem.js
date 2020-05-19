@@ -2,23 +2,26 @@ import React from "react";
 import { LikePost } from "./LikePost";
 import moment from 'moment';
 
-export const OneMessage = (param)=> {
+export const MessageItem = ({message})=> {
+
   return (
 
-    <li key={param.message._id}>
+    <section className="message-item">
           <section className="message">
-            {param.message.message}
+            <p>
+              {message.message}
+            </p>
           </section>
          
           <section className="activity">
             <div className="likes">
-              <LikePost message={param.message}/>  
+              <LikePost message={message}/>  
             </div>
             <div>
-              {moment(param.message.createdAt).fromNow()}
+              {moment(message.createdAt).fromNow()}
             </div>
           </section>
-          </li>
+          </section>
 
   )
 }
