@@ -3,6 +3,7 @@ import React, { useState } from "react"
 export const PostThoughts = ({setThought}) => {
 
   const [inputValue, setInputValue] = useState("")
+  const [name, setName] = useState();
   
   const handleSubmit = async (event) => {
     event.preventDefault()  
@@ -13,10 +14,12 @@ export const PostThoughts = ({setThought}) => {
          "content-type": "application/json" 
       },
       body: JSON.stringify({
-        "message": inputValue
+        "message": inputValue,
+        "name": name
       })
     })
     setThought(inputValue) 
+    setName("")
     setInputValue("")
    }
 
@@ -39,11 +42,19 @@ export const PostThoughts = ({setThought}) => {
         <div className="show-input-length">
 
           <p>
-            {inputValue.length} / 140 characters.
+            {inputValue.length} / 140 characters. 
+            {inputValue.length < 5 && " Min 5 characters"}
           </p>
-
-          {inputValue.length < 5 && <p>Minimum of 5 characters</p>}
         </div>
+
+        <input
+          type="text"
+          min="2"
+          placeholder="Your name (optional)"
+          value={name}
+          onChange={event => setName(event.target.value)}
+        >
+        </input>
           
         <button 
           type="submit"

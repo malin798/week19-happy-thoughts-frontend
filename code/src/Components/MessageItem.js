@@ -11,6 +11,9 @@ export const MessageItem = ({message})=> {
             <p>
               {message.message}
             </p>
+            <p className="creator-name">
+              /{message.name}
+            </p>
           </section>
          
           <section className="activity">
