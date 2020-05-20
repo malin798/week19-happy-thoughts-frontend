@@ -6,6 +6,12 @@
   @include size(fit-content, 98%);
   background-color: $primary-color;
   min-height: 95px;
+  margin: 3px;
   margin-bottom: 20px;
   padding: 10px;
+}
+
+.message-item:hover {
+  transform: rotate(1deg);
+  transition: 0.1s;
 }
