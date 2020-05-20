@@ -4,7 +4,8 @@
   @include box-shadow;
   @include display(space-between, unset, column);
   @include size(fit-content, 98%);
-  min-height: 100px;
+  background-color: $primary-color;
+  min-height: 95px;
   margin-bottom: 20px;
   padding: 10px;
 }

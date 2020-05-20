@@ -16,6 +16,8 @@ export const App = () => {
 
       <main>
 
+        <h1> [ Happy thoughts ]</h1>
+
        <PostThoughts 
         setThought={setThought}
       />

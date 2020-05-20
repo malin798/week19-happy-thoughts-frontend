@@ -12,30 +12,51 @@
 }
 
 body {
+  @include size(100vh, 100vw);
+  @include display(center, center, column);
+  background-color: #b2fff130;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (min-width: 630px) {
+    background-image: url(../images/jen-theodore-OILcNO6Dmv8-unsplash.jpg);
+  }
 }
 
 #root {
-  display: flex;
-  justify-content: center;
+  @include size(100vh, 100vw);
+  @include display(center, center, column); 
+  background-image: url(../images/jen-theodore-OILcNO6Dmv8-unsplash-small.jpg); 
+  background-color: #d5d2d26e;
+
+  @media (min-width: 630px) {
+    @include size(90vh, 600px);
+    background-image: unset;
+    border-radius: 15px;
+  }
 }
 
 main {
   @include display(unset, center, column);
-  @include size(100vh, 100vw);
+  @include size(85vh, 100vw);
   padding: 10px;
 
-  @media (min-width: 500px) {
+  @media (min-width: 630px) {
     width: 370px;
+  }
+
+  h1 {
+    background-color: wheat;
+    font-size: 16px;
+    margin-top: 0;
   }
 }
 
 p {
-  color: #6e6a6a;
+  color: #242323;
   margin: 0;
 }

@@ -28,7 +28,7 @@ export const PostThoughts = ({setThought}) => {
         <h2>What is making you happy right now?</h2>
 
         <textarea 
-          placeholder="Fill in your happy thought here"
+          placeholder="Your happy thought.."
           maxLength="140"
           minLength="5"
           value={inputValue}
@@ -51,7 +51,7 @@ export const PostThoughts = ({setThought}) => {
           style={{backgroundColor: '#ffb2b2'}}
           {...inputValue.length < 5 ?  {disabled: true} : {enabled: true} }
         >
-          <span role="img" aria-label="heart emoji">❤️</span> Send happy thought <span role="img" aria-label="heart emoji">❤️</span>
+          <span role="img" aria-label="heart letter">💌</span> Send happy thought <span role="img" aria-label="heart letter">💌</span>
         </button>
 
       </form>

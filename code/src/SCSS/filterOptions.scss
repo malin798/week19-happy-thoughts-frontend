@@ -2,4 +2,10 @@
   justify-self: start;
   align-self: start;
   margin-bottom: 5px;
+
+  select {
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+  }
 }

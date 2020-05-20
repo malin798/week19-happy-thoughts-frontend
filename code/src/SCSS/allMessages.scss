@@ -2,8 +2,21 @@
 
 .all-messages {
   margin: 5px 0;
+  padding-right: 5px;
   width: 100%;
   overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.all-messages::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.698); /* or add it to the track */
+}
+
+.all-messages::-webkit-scrollbar-thumb {
+  background: rgb(110, 60, 91); 
+  border-radius: 20px;
 }
 
 .activity {
