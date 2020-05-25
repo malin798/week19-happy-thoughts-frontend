@@ -7,7 +7,7 @@ export const AllMessages = ({myFilter, setMyFilter, allMessages, setAllMessages,
     
   useEffect(() => {
     setLoading(true)
-    fetch(`https://malins-happy-thoughts-api.herokuapp.com/${myFilter}`, {
+    fetch(`https://malins-happy-thoughts-api.herokuapp.com${myFilter}`, {
       method: 'GET'
     })
     .then(response => response.json()) 
