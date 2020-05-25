@@ -5,10 +5,9 @@ import { Loading } from './Loading'
 
 export const AllMessages = ({myFilter, setMyFilter, allMessages, setAllMessages, loading, setLoading, thought}) => {
     
-  //"https://malins-happy-thoughts-api.herokuapp.com/thoughts"
   useEffect(() => {
     setLoading(true)
-    fetch(`https://malins-happy-thoughts-api.herokuapp.com/thoughts${myFilter}`, {
+    fetch(`https://malins-happy-thoughts-api.herokuapp.com/${myFilter}`, {
       method: 'GET'
     })
     .then(response => response.json()) 

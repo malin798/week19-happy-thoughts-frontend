@@ -7,8 +7,7 @@ export const PostThoughts = ({setThought}) => {
   
   const handleSubmit = async (event) => {
     event.preventDefault()  
-    //"https://malins-happy-thoughts-api.herokuapp.com/thoughts"
-    await fetch("https://malins-happy-thoughts-api.herokuapp.com/thoughts", {
+    await fetch("https://malins-happy-thoughts-api.herokuapp.com/", {
       method: 'POST',
       headers: {
          "content-type": "application/json" 
